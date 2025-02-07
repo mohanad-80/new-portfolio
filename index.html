@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-content">
+        <a href="#home" class="logo">MA</a>
+        <div class="nav-links">
+          <a href="#home" class="active">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#about">About</a>
+        </div>
+        <button id="theme-toggle">🌙</button>
+        <button class="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="section active">
+        <div class="container">
+          <h1>Hey, I'm Mohanad Ahmed 👋</h1>
+          <p class="subtitle">
+            A backend engineer passionate about building scalable and efficient web solutions. </br>
+            Interested in low-level programming and <span class="tooltip" data-tooltip="Operating Systems">OS</span>.
+          </br>
+            Also I'm a <span class="tooltip" data-tooltip="Computer Science">CS</span> student at <span class="tooltip" data-tooltip="Cairo University">CU</span>... most of the <span class="tooltip" data-tooltip="When not exploring other stuff 😉">time</span>.
+          </p>
+          <a href="assets/Mohanad-Ahmed-CV.pdf" download class="home-btn">Download CV</a>
+          <a href="https://github.com/mohanad-80" target="_blank" class="home-btn">GitHub</a>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>My Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="slideshow">
+                <div class="slides">
+                  <img
+                    src="assets/falling-sand/falling-sand-1.png"
+                    alt="falling sand Simulator Screenshot 1"
+                  />
+                  <img
+                    src="assets/falling-sand/falling-sand-2.png"
+                    alt="falling sand Simulator Screenshot 2"
+                  />
+                </div>
+                <div class="slide-dots"></div>
+              </div>
+              <h3>Falling Sand Simulator</h3>
+              <p>The Falling Sand Simulator is an interactive web-based simulation built using HTML, CSS, and JavaScript. It allows users to draw and manipulate sand particles on a canvas, with features like color picking, adjustable brush sizes, and a rainbow mode for dynamic effects.</p>
+              <div class="project-links">
+                <a href="https://mohanad-80.github.io/Falling_sand_simulator/" target="_blank">Live Demo</a>
+                <a href="https://github.com/mohanad-80/Falling_sand_simulator" target="_blank">GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="slideshow">
+                <div class="slides">
+                  <img src="assets/images/idguard.png" alt="IDGuard extension page preview" />
+                </div>
+                <div class="slide-dots"></div>
+              </div>
+              <h3>IDGuard</h3>
+              <p>A simple VSCode extension that shows a warning message when a duplicated id attribute is detected in an HTML file.</p>
+              <div class="project-links">
+                <a href="https://marketplace.visualstudio.com/items?itemName=MohanadAhmed.idguard" target="_blank">Live Demo</a>
+              </div>
+            </div>
+        
+            <div class="project-card">
+              <div class="slideshow">
+                <div class="slides">
+                  <img src="assets/images/game-of-life.jpeg" alt="Game of Life demo" />
+                </div>
+                <div class="slide-dots"></div>
+              </div>
+              <h3>Game of Life</h3>
+              <p>A simple implementation of Conway's Game of Life.</p>
+              <div class="project-links">
+                <a href="https://mohanad-80.github.io/game_of_life/" target="_blank">Live Demo</a>
+              </div>
+            </div>
+        
+            <div class="project-card">
+              <div class="slideshow">
+                <div class="slides">
+                  <img src="assets/images/daily-dose-blog.jpeg" alt="Daily Dose Blog demo" />
+                </div>
+                <div class="slide-dots"></div>
+              </div>
+              <h3>The Daily Dose Blog</h3>
+              <p>A simple blog made with the MEAN stack.</p>
+              <div class="project-links">
+                <a href="https://blog-project-iilf.onrender.com/" target="_blank">Live Demo</a>
+              </div>
+            </div>
+        
+            <div class="project-card">
+              <div class="slideshow">
+                <div class="slides">
+                  <img src="assets/images/weather-app.jpeg" alt="Weather App demo" />
+                </div>
+                <div class="slide-dots"></div>
+              </div>
+              <h3>What is the Weather?</h3>
+              <p>A simple weather app made using a public API.</p>
+              <div class="project-links">
+                <a href="https://weather-app-1c0j.onrender.com/" target="_blank">Live Demo</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="slideshow">
+                <div class="slides">
+                  <img src="./assets/images/to-do-app.jpeg" alt="To-Do List demo" />
+                </div>
+                <div class="slide-dots"></div>
+              </div>
+              <h3>To-Do List</h3>
+              <p>This is a simple to-do list app made with JSX.</p>
+              <div class="project-links">
+                <a href="https://todoapp-awje.onrender.com/" target="_blank">Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container">
+          <h2>Experience & Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Work Experience</h3>
+              <div class="experience-item">
+                <h4>Slash Hub</h4>
+                <h5>Backend Developer</h5>
+                <p class="date">2024-10 - 2024-12</p>
+                <ul>
+                  <li><span style="font-weight: bold;">Order Management System:</span> Designed and implemented a system that tracks 100% of order updates, improving order processing.</li>
+                  <li><span style="font-weight: bold;">Product Rating System:</span> Developed a multi-dimensional rating system covering products, shipping, and sellers, aiming to boost user engagement by 25%.</li>
+                  <li><span style="font-weight: bold;">Collaboration & Tools:</span> Worked with a team of 4 developers, managing 50+ issues and PRs using GitHub, Trello, and Discord.</li>
+                </ul>
+              </div>
+              <div class="experience-item">
+                <h4>Slash Hub</h4>
+                <h5>Backend Developer Intern</h5>
+                <p class="date">2024-7 - 2024-10</p>
+                <ul>
+                  <li><span style="font-weight: bold;">Website Backend Development:</span> Reused 85% of existing app code for the website backend to ensure consistency and reduce duplication.</li>
+                  <li><span style="font-weight: bold;">Unit Testing:</span> Increased testing efficiency by 20% using Jest, implementing robust mock handling.</li>
+                  <li><span style="font-weight: bold;">API Documentation:</span> Documented 15+ API endpoints with Swagger, improving clarity for frontend developers.</li>
+                  <li><span style="font-weight: bold;">Database Optimization:</span> Reduced database query response times by 30% through PostgreSQL query optimization, tested via pgAdmin4 and DBeaver.</li>
+                  <li><span style="font-weight: bold;">Payment Gateway Integration:</span> Integrated Geidea's payment gateway, building APIs for direct payments and evaluating Pay by Link services.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Education</h3>
+              <div class="experience-item">
+                <h4>Cairo University</h4>
+                <p class="date">2022 - 2026</p>
+                <p>Bachelor's in Computer Science, Faculty of Computers and Artificial Intelligence</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="profile-image">
+            <img src="assets/profile.jpg" alt="Profile Picture" />
+          </div>
+          <div class="about-content">
+            <div class="about-text">
+              <p>Write your detailed introduction here...</p>
+            </div>
+            <div class="contact-info">
+              <h3>Contact Me</h3>
+              <p>Email: mhndahmd031@gmail.com</p>
+              <p>LinkedIn: <a href="https://www.linkedin.com/in/mohanad-ahmed-691a50250/" target="_blank">Profile</a></p>
+              <p>GitHub: <a href="https://github.com/mohanad-80" target="_blank">Profile</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
