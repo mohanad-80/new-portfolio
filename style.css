@@ -139,7 +139,7 @@ main {
 }
 
 .section {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 2rem;
   display: none;
 }
@@ -186,7 +186,7 @@ h1, h2 {
 .tooltip::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: 120%;
+  bottom: 90%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
