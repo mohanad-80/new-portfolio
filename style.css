@@ -180,7 +180,7 @@ h1, h2 {
 
 .tooltip:hover {
   color: var(--primary-color);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .tooltip::after {
