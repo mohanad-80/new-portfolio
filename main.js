@@ -4,7 +4,7 @@ const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector("nav");
 const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
-const logo = document.querySelector('.logo');
+const logo = document.querySelector(".logo");
 
 function setTheme(isDark) {
   document.documentElement.setAttribute(
@@ -38,7 +38,16 @@ document.addEventListener("click", (e) => {
 const navLinks = document.querySelectorAll(".nav-links a");
 const sections = document.querySelectorAll(".section");
 
+// Global array to store slideshow interval IDs
+let slideshowIntervals = [];
+
 function showSection(sectionId) {
+  // If leaving the projects page, clear all slideshow intervals
+  if (sectionId !== "#projects") {
+    slideshowIntervals.forEach((id) => clearInterval(id));
+    slideshowIntervals = [];
+  }
+
   sections.forEach((section) => {
     section.classList.remove("active");
   });
@@ -53,12 +62,19 @@ function showSection(sectionId) {
 
   // Close mobile menu after navigation
   nav.classList.remove("nav-open");
+
+  // If we're on the projects page, initialize all slideshows
+  if (sectionId === "#projects") {
+    document
+      .querySelectorAll("#projects .slideshow")
+      .forEach(initializeSlideshow);
+  }
 }
 
 // Add click handler for logo
-logo.addEventListener('click', (e) => {
+logo.addEventListener("click", (e) => {
   e.preventDefault();
-  showSection('#home');
+  showSection("#home");
 });
 
 navLinks.forEach((link) => {
@@ -85,6 +101,13 @@ function initializeSlideshow(slideshow) {
   const dotsContainer = slideshow.querySelector(".slide-dots");
   let currentSlide = 0;
 
+  // Always start at the first image
+  currentSlide = 0;
+  slides.style.transform = "translateX(0%)";
+
+  // Clear any existing dots
+  dotsContainer.innerHTML = "";
+
   // Create dots
   images.forEach((_, index) => {
     const dot = document.createElement("div");
@@ -109,13 +132,10 @@ function initializeSlideshow(slideshow) {
     goToSlide(currentSlide);
   }
 
-  // Auto-advance slides every 3 seconds
-  setInterval(nextSlide, 3000);
+  // Auto-advance slides every 3 seconds and store the interval ID
+  const intervalId = setInterval(nextSlide, 3000);
+  slideshowIntervals.push(intervalId);
 }
 
-// Initialize all slideshows
-document.querySelectorAll(".slideshow").forEach(initializeSlideshow);
-
 // Show home section by default
-// showSection("#home");
-showSection("#projects");
+showSection("#home");
