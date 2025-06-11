@@ -65,6 +65,10 @@ function showSection(sectionId) {
 
   // If we're on the projects page, initialize all slideshows
   if (sectionId === "#projects") {
+    // Lazy-load images
+    document.querySelectorAll("#projects img[data-src]").forEach((img) => {
+      if (!img.src) img.src = img.getAttribute("data-src");
+    });
     document
       .querySelectorAll("#projects .slideshow")
       .forEach(initializeSlideshow);
